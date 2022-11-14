@@ -1,4 +1,4 @@
-package arrays.questions;
+package arrays.questions.arrays;
 
 public class RemoveDuplicatesSortedArray {
 
