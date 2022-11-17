@@ -10,7 +10,6 @@ public class ListNode {
     }
 }
 */
-import linklists.ListNode;
 
 // Implementation for Singly Linked List
 public class SinglyLinkedList {
