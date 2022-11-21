@@ -4,6 +4,9 @@ package linklists.questions;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/*
+https://leetcode.com/problems/implement-stack-using-queues/
+ */
 class MyStack {
    private Queue<Integer> queue;
     int lastVal = 0;
