@@ -30,15 +30,31 @@ public class ReverseLinkedList {
         return prev;
     }
 
+    public ListNode reverseList2(ListNode head) {
+        return rev(head, null);
+    }
+
+    public ListNode rev(ListNode node, ListNode pre) {
+        if (node == null) return pre;
+        ListNode temp = node.next;
+        node.next = pre;
+        return rev(temp, node);
+    }
+
     public static void main(String[] args) {
         ListNode head = new ListNode(1);
         head.next = new ListNode(2);
         head.next.next = new ListNode(3);
         ReverseLinkedList reverseLinkedList = new ReverseLinkedList();
-        ListNode reversedHead = reverseLinkedList.reverseList(head);
-        while (reversedHead!=null){
-            System.out.println(reversedHead.val);
-            reversedHead = reversedHead.next;
+//        ListNode reversedHead = reverseLinkedList.reverseList(head);
+        ListNode reversedHead2 = reverseLinkedList.reverseList2(head);
+//        while (reversedHead!=null){
+//            System.out.println(reversedHead.val);
+//            reversedHead = reversedHead.next;
+//        }
+        while (reversedHead2!=null){
+            System.out.println(reversedHead2.val);
+            reversedHead2 = reversedHead2.next;
         }
     }
 }
