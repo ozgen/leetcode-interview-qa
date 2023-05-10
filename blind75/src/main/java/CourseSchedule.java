@@ -18,7 +18,7 @@ public class CourseSchedule {
         int[] visit = new int[numCourses];
         for (int i = 0; i < numCourses; i++) {
             if (visit[i] == 0) {
-                if(isCycle(adj, visit, i)){
+                if (isCycle(adj, visit, i)) {
                     return false;
                 }
             }
@@ -27,16 +27,18 @@ public class CourseSchedule {
     }
 
     private boolean isCycle(List<List<Integer>> adj, int[] visit, int i) {
-        if(visit[i] == 2){
+        if (visit[i] == 2) {
             return true;
         }
         visit[i] = 2;
-        for(int j = 0; j < adj.get(i).size(); j++){
-            if(isCycle(adj, visit, adj.get(i).get(j))){
-                return true;
+        for (int j = 0; j < adj.get(i).size(); j++) {
+            if (visit[adj.get(i).get(j)] != 1) {
+                if (isCycle(adj, visit, adj.get(i).get(j))) {
+                    return true;
+                }
             }
         }
-        visit[i]=1;
+        visit[i] = 1;
         return false;
     }
 
