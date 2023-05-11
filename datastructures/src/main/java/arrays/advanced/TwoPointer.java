@@ -1,4 +1,4 @@
-package arrays.questions.arrays.advanced;
+package arrays.advanced;
 
 public class TwoPointer {
 
