@@ -38,6 +38,5 @@ public class TopologicalSort {
             dfs(neighbor, adj, visit, topSort);
         }
         topSort.add(src);
-        return;
     }
 }
