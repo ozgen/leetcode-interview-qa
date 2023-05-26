@@ -17,10 +17,11 @@ public class CustomIterator implements Iterator<String> {
 
     public CustomIterator(Iterator<String> iterator) {
         this.originalIterator = iterator;
-        isLast = false;
+
         if (originalIterator.hasNext()) {
             current = new Pair(originalIterator.next(), 1);
         }
+        isLast = !originalIterator.hasNext();
     }
 
     @Override
@@ -40,10 +41,18 @@ public class CustomIterator implements Iterator<String> {
                 nextVal = new Pair(originalIterator.next(), 1);
                 current.value++;
             }
+
+            if (!originalIterator.hasNext()) {
+
+                if (nextVal.key.equals(current.key)) {
+                    current.value++;
+                } else {
+                    isLast = true;
+                }
+            }
             Pair tmp = current;
             current = nextVal;
 
-            if (!originalIterator.hasNext()) isLast = true;
 
             return tmp.key + " with " + tmp.value;
         }
@@ -68,7 +77,7 @@ public class CustomIterator implements Iterator<String> {
 
 
     public static void main(String[] args) {
-        List<String> strings = Arrays.asList("ab", "ac", "ac", "ab", "ab", "ab", "ad");
+        List<String> strings = Arrays.asList("ab", "ac", "ac", "ab", "ab", "ab", "ad", "ad", "ad");
         Iterator<String> iterator = new CustomIterator(strings.iterator());
 
         while (iterator.hasNext()) {

@@ -31,4 +31,11 @@ public class Permutations {
         }
         return result;
     }
+
+    public static void main(String[] args) {
+        int [] arr = new int[]{1,2,3};
+        Permutations permutations = new Permutations();
+        List<List<Integer>> permute = permutations.permute(arr);
+
+    }
 }

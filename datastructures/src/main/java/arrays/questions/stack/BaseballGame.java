@@ -6,7 +6,6 @@ import java.util.Stack;
 public class BaseballGame {
 
     /**
-     *
      * https://leetcode.com/problems/baseball-game/
      */
     public int calPoints(String[] ops) {
@@ -36,7 +35,7 @@ public class BaseballGame {
 
     public static void main(String[] args) {
         BaseballGame game = new BaseballGame();
-        String [] scores = new String[]{"5","-2","4","C","D","9","+","+"};
+        String[] scores = new String[]{"5", "-2", "4", "C", "D", "9", "+", "+"};
         int res = game.calPoints(scores);
         System.out.println(res);
     }
