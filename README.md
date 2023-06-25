@@ -134,5 +134,7 @@ This repository also contains solutions to the LeetCode Blind 75 Questions. Each
 44. [House Robber II](blind75/src/main/java/HouseRobber_II.java)
 44. [Longest Palindromic Substring](blind75/src/main/java/LongestPalindromicSubstring.java)
 44. [Palindromic Substring](blind75/src/main/java/PalindromicSubstrings.java)
-45. ...
+45. [Decode Ways](blind75/src/main/java/DecodeWays.java)
+45. [Decode Ways](blind75/src/main/java/DecodeWays.java)
+45. [Coin Change](blind75/src/main/java/CoinChange.java)
  
