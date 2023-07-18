@@ -137,4 +137,7 @@ This repository also contains solutions to the LeetCode Blind 75 Questions. Each
 45. [Decode Ways](blind75/src/main/java/DecodeWays.java)
 45. [Decode Ways](blind75/src/main/java/DecodeWays.java)
 45. [Coin Change](blind75/src/main/java/CoinChange.java)
+45. [Maximum Product Subarray](blind75/src/main/java/MaximumProductSubarray.java)
+
+...
  
